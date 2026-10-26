@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <!-- Обязательный метатег Viewport строго по ИТК Лабораторной работы № 5 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>GreenBite — Меню и каталог блюд | Лабораторная работа № 5 (Страница 2)</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Всплывающее уведомление интерфейса -->
+  <div id="toastMsg" class="toast-msg" role="status" aria-live="polite">
+    <span id="toastText">Уведомление</span>
+  </div>
+
+  <!-- Семантическая шапка сайта <header> -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/logo.svg" alt="Логотип GreenBite" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-title">GreenBite</span>
+          <span class="brand-subtitle">Mobile First Smart Nutrition</span>
+        </div>
+      </a>
+
+      <!-- Семантическая навигация <nav> между 3 отдельными страницами -->
+      <nav class="main-nav" aria-label="Основная навигация по страницам">
+        <ul class="nav-list">
+          <li>
+            <a href="index.html" class="nav-link">
+              <span class="nav-icon">🏠</span>
+              <span>Главная</span>
+            </a>
+          </li>
+          <li>
+            <a href="catalog.html" class="nav-link active">
+              <span class="nav-icon">🥗</span>
+              <span>Меню</span>
+            </a>
+          </li>
+          <li>
+            <a href="tracker.html" class="nav-link">
+              <span class="nav-icon">📊</span>
+              <span>Трекер и заказ</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" id="themeToggleBtn" class="icon-btn" aria-label="Переключить тему">🌙 Тема</button>
+        <a href="tracker.html" class="icon-btn">
+          <span>🛒</span>
+          <span id="cartCountBadge" class="cart-badge">2</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Семантический основной блок <main> Страницы 2 -->
+  <main class="site-main container">
+
+    <section class="screen-section">
+      <div class="section-header">
+        <span class="section-badge">Страница 2 (catalog.html) • Адаптивная сетка Flexbox</span>
+        <h1 class="section-title">Каталог функциональных блюд</h1>
+        <p class="section-desc">Фильтруйте блюда по программе питания, ищите по названию и добавляйте в свой дневной рацион.</p>
+      </div>
+
+      <div class="catalog-controls">
+        <div class="filter-Chips" role="group" aria-label="Фильтр категорий">
+          <button type="button" class="chip-btn active" data-cat="all">Все блюда</button>
+          <button type="button" class="chip-btn" data-cat="detox">Детокс</button>
+          <button type="button" class="chip-btn" data-cat="balance">Баланс</button>
+          <button type="button" class="chip-btn" data-cat="sport">Спорт</button>
+          <button type="button" class="chip-btn" data-cat="vegan">Веган</button>
+        </div>
+        <div class="search-box">
+          <input type="search" id="catalogSearch" class="search-input" placeholder="Поиск по названию блюда...">
+        </div>
+      </div>
+
+      <div id="catalogGrid" class="catalog-grid"></div>
+
+      <a href="tracker.html" class="primary-btn">Перейти к трекеру КБЖУ и оформлению заказа (tracker.html) →</a>
+    </section>
+
+  </main>
+
+  <!-- Семантический подвал сайта <footer> -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>GreenBite — Лабораторная работа № 5</strong>
+        <p>Многостраничное мобильно-ориентированное приложение (index.html, catalog.html, tracker.html)</p>
+      </div>
+      <div class="footer-badges">
+        <span class="footer-tag">HTML5 Semantic</span>
+        <span class="footer-tag">Normalize.css</span>
+        <span class="footer-tag">CSS Flexbox</span>
+        <span class="footer-tag">Mobile First</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

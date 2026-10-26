@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <!-- Обязательный метатег Viewport строго по ИТК Лабораторной работы № 5 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>GreenBite — Главная | Лабораторная работа № 5 (Страница 1)</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Всплывающее уведомление интерфейса -->
+  <div id="toastMsg" class="toast-msg" role="status" aria-live="polite">
+    <span id="toastText">Уведомление</span>
+  </div>
+
+  <!-- Семантическая шапка сайта <header> -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/logo.svg" alt="Логотип GreenBite" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-title">GreenBite</span>
+          <span class="brand-subtitle">Mobile First Smart Nutrition</span>
+        </div>
+      </a>
+
+      <!-- Семантическая навигация <nav> между 3 отдельными страницами -->
+      <nav class="main-nav" aria-label="Основная навигация по страницам">
+        <ul class="nav-list">
+          <li>
+            <a href="index.html" class="nav-link active">
+              <span class="nav-icon">🏠</span>
+              <span>Главная</span>
+            </a>
+          </li>
+          <li>
+            <a href="catalog.html" class="nav-link">
+              <span class="nav-icon">🥗</span>
+              <span>Меню</span>
+            </a>
+          </li>
+          <li>
+            <a href="tracker.html" class="nav-link">
+              <span class="nav-icon">📊</span>
+              <span>Трекер и заказ</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" id="themeToggleBtn" class="icon-btn" aria-label="Переключить тему">🌙 Тема</button>
+        <a href="tracker.html" class="icon-btn">
+          <span>🛒</span>
+          <span id="cartCountBadge" class="cart-badge">2</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Семантический основной блок <main> Страницы 1 -->
+  <main class="site-main container">
+
+    <section class="screen-section">
+      <div class="hero-layout">
+        <div class="hero-content">
+          <span class="section-badge">Страница 1 (index.html) • Главный экран</span>
+          <h1 class="hero-title">
+            Персональное питание с доставкой за <span class="hero-highlight">30 минут</span>
+          </h1>
+          <p class="section-desc">
+            Мобильно-ориентированное веб-приложение из <strong>3 отдельных страниц</strong>, сверстанное по стратегии <strong>Mobile First</strong> с использованием <strong>CSS Flexbox</strong> и относительных единиц измерения (<code>%</code>, <code>vw</code>, <code>vh</code>, <code>rem</code>, <code>em</code>).
+          </p>
+
+          <div class="goal-selector">
+            <strong>Выберите вашу дневную цель по калориям:</strong>
+            <div class="goal-buttons">
+              <button type="button" class="goal-btn" data-kcal="1400">
+                <span>Снижение веса</span>
+                <span>1400 ккал</span>
+              </button>
+              <button type="button" class="goal-btn active" data-kcal="1800">
+                <span>Баланс энергии</span>
+                <span>1800 ккал</span>
+              </button>
+              <button type="button" class="goal-btn" data-kcal="2400">
+                <span>Спорт и масса</span>
+                <span>2400 ккал</span>
+              </button>
+            </div>
+          </div>
+
+          <a href="catalog.html" class="primary-btn">Перейти на страницу каталога блюд (catalog.html) →</a>
+        </div>
+
+        <div class="hero-visual">
+          <img src="assets/hero-bowl.svg" alt="Сбалансированный боул GreenBite" class="hero-image">
+          <div class="kpi-row">
+            <div class="kpi-card">
+              <span class="kpi-value" id="heroTargetDisplay">1800 ккал</span>
+              <span class="kpi-label">Ваша цель на день</span>
+            </div>
+            <div class="kpi-card">
+              <span class="kpi-value">100% Fresh</span>
+              <span class="kpi-label">Фермерские продукты</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen-section">
+      <div class="section-header">
+        <span class="section-badge">Отзывы клиентов и FAQ</span>
+        <h2 class="section-title">Почему выбирают мобильный сервис GreenBite</h2>
+        <p class="section-desc">Реальные отзывы пользователей и ответы на частые вопросы о работе приложения.</p>
+      </div>
+
+      <div class="reviews-grid">
+        <article class="review-card">
+          <div class="review-header">
+            <span>Алина Смирнова</span>
+            <span class="review-stars">★★★★★</span>
+          </div>
+          <p class="section-desc">«Очень удобно собирать рацион со смартфона по дороге с тренировки. Нижняя навигация и быстрый подсчёт КБЖУ экономят массу времени!»</p>
+        </article>
+
+        <article class="review-card">
+          <div class="review-header">
+            <span>Дмитрий Волков</span>
+            <span class="review-stars">★★★★★</span>
+          </div>
+          <p class="section-desc">«На большом мониторе ноутбука сайт автоматически перестраивается в удобную трёхколоночную панель. Доставка всегда вовремя.»</p>
+        </article>
+
+        <article class="review-card">
+          <div class="review-header">
+            <span>Екатерина Орлова</span>
+            <span class="review-stars">★★★★★</span>
+          </div>
+          <p class="section-desc">«Попробовала программу Детокс — все макронутриенты прозрачно расписаны, порции свежие и сытные.»</p>
+        </article>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item open">
+          <button type="button" class="faq-question">
+            <span>Как устроена структура из 3 отдельных страниц?</span>
+            <span>▾</span>
+          </button>
+          <div class="faq-answer">
+            Приложение состоит из трёх отдельных HTML-документов: <code>index.html</code> (Главная и подбор калорийности), <code>catalog.html</code> (Каталог блюд с фильтрацией) и <code>tracker.html</code> (Трекер КБЖУ и корзина). Выбранные блюда и цель калорий автоматически сохраняются между страницами.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span>Как реализована стратегия Mobile First?</span>
+            <span>▾</span>
+          </button>
+          <div class="faq-answer">
+            Базовые CSS-стили написаны без медиа-запросов специально для узких экранов смартфонов (до 480px): одноколоночный поток Flexbox, крупный размер кнопок и нижнее расположение меню. Для планшетов (<code>@media (min-width: 768px)</code>) и десктопов (<code>@media (min-width: 1024px)</code>) сетка расширяется в несколько колонок.
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Семантический подвал сайта <footer> -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>GreenBite — Лабораторная работа № 5</strong>
+        <p>Многостраничное мобильно-ориентированное приложение (index.html, catalog.html, tracker.html)</p>
+      </div>
+      <div class="footer-badges">
+        <span class="footer-tag">HTML5 Semantic</span>
+        <span class="footer-tag">Normalize.css</span>
+        <span class="footer-tag">CSS Flexbox</span>
+        <span class="footer-tag">Mobile First</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

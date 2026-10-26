@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <!-- Обязательный метатег Viewport строго по ИТК Лабораторной работы № 5 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>GreenBite — Трекер КБЖУ и Корзина | Лабораторная работа № 5 (Страница 3)</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Всплывающее уведомление интерфейса -->
+  <div id="toastMsg" class="toast-msg" role="status" aria-live="polite">
+    <span id="toastText">Уведомление</span>
+  </div>
+
+  <!-- Семантическая шапка сайта <header> -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/logo.svg" alt="Логотип GreenBite" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-title">GreenBite</span>
+          <span class="brand-subtitle">Mobile First Smart Nutrition</span>
+        </div>
+      </a>
+
+      <!-- Семантическая навигация <nav> между 3 отдельными страницами -->
+      <nav class="main-nav" aria-label="Основная навигация по страницам">
+        <ul class="nav-list">
+          <li>
+            <a href="index.html" class="nav-link">
+              <span class="nav-icon">🏠</span>
+              <span>Главная</span>
+            </a>
+          </li>
+          <li>
+            <a href="catalog.html" class="nav-link">
+              <span class="nav-icon">🥗</span>
+              <span>Меню</span>
+            </a>
+          </li>
+          <li>
+            <a href="tracker.html" class="nav-link active">
+              <span class="nav-icon">📊</span>
+              <span>Трекер и заказ</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" id="themeToggleBtn" class="icon-btn" aria-label="Переключить тему">🌙 Тема</button>
+        <a href="tracker.html" class="icon-btn">
+          <span>🛒</span>
+          <span id="cartCountBadge" class="cart-badge">2</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Семантический основной блок <main> Страницы 3 -->
+  <main class="site-main container">
+
+    <section class="screen-section">
+      <div class="section-header">
+        <span class="section-badge">Страница 3 (tracker.html) • Калькулятор КБЖУ и корзина</span>
+        <h1 class="section-title">Контроль дневного рациона и оформление доставки</h1>
+        <p class="section-desc">Автоматический пересчёт калорийности, белков, жиров и углеводов на основе блюд, выбранных в каталоге.</p>
+      </div>
+
+      <div class="tracker-layout">
+        <div class="tracker-panel">
+          <h2>Прогресс по калориям</h2>
+          <div class="progress-wrap">
+            <div class="progress-labels">
+              <span>Набрано за день</span>
+              <span id="kcalProgressText">960 / 1800 ккал</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div id="kcalProgressBar" class="progress-bar-fill"></div>
+            </div>
+          </div>
+
+          <div class="macro-summary">
+            <div class="macro-box">
+              <div id="macroProtein" class="macro-val">54 г</div>
+              <div class="macro-name">Белки</div>
+            </div>
+            <div class="macro-box">
+              <div id="macroFat" class="macro-val">36 г</div>
+              <div class="macro-name">Жиры</div>
+            </div>
+            <div class="macro-box">
+              <div id="macroCarbs" class="macro-val">100 г</div>
+              <div class="macro-name">Углеводы</div>
+            </div>
+          </div>
+
+          <h2>Выбранные блюда</h2>
+          <div id="cartList" class="cart-list"></div>
+          <a href="catalog.html" class="icon-btn">+ Добавить ещё блюда из меню</a>
+        </div>
+
+        <div class="cart-panel">
+          <h2>Оформление быстрой доставки</h2>
+          <p class="section-desc">Итоговая сумма заказа: <strong id="cartTotalPrice">1170 ₽</strong></p>
+          <form id="orderForm" class="order-form">
+            <input type="text" id="customerName" class="form-input" placeholder="Ваше имя" required>
+            <input type="tel" id="customerPhone" class="form-input" placeholder="Телефон для связи" required>
+            <select id="deliverySlot" class="form-input">
+              <option value="morning">Утренний интервал (07:00 – 09:00)</option>
+              <option value="day">Дневной интервал (12:00 – 14:00)</option>
+              <option value="evening">Вечерний интервал (19:00 – 21:00)</option>
+            </select>
+            <button type="submit" class="primary-btn">Подтвердить заказ рациона</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Семантический подвал сайта <footer> -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>GreenBite — Лабораторная работа № 5</strong>
+        <p>Многостраничное мобильно-ориентированное приложение (index.html, catalog.html, tracker.html)</p>
+      </div>
+      <div class="footer-badges">
+        <span class="footer-tag">HTML5 Semantic</span>
+        <span class="footer-tag">Normalize.css</span>
+        <span class="footer-tag">CSS Flexbox</span>
+        <span class="footer-tag">Mobile First</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
